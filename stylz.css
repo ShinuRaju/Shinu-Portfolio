@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --container-width: 980px;
+    --navbar-color: #0d1821;
+    --projects-color: #344966;
+    --banner-color: #b4cded;
+    --white-color: #f0f4ef;
+    --darkyellow-color: #bfcc94;
+  }
+  
+  body {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 4rem;
+    text-align: center;
+  }
+  p {
+    font-style: italic;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    padding: 0 2rem;
+    background-color: var(--navbar-color);
+    transition: top 500ms ease-in-out;
+    width: 100%;
+  }
+  
+  nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-width);
+    margin: 0 auto;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  nav .logo a {
+    font-size: 3rem;
+  }
+  
+  nav .links a {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    height: 100%;
+    padding: 2rem 0;
+  }
+  
+  #welcome-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--banner-color);
+    padding: 2rem;
+  }
+  #welcome-section .banner p {
+    text-align: center;
+  }
+  
+  #projects {
+    background-color: var(--projects-color);
+  }
+  #projects .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+  }
+  
+  #projects h2,
+  #reach h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+    color: var(--banner-color);
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+  }
+  
+  #projects .container .project-grid {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    padding: 1rem;
+    align-content: center;
+  }
+  
+  #projects .project-tile {
+    border: 2px solid var(--banner-color);
+    border-radius: 5px;
+    padding: 1rem;
+  }
+  
+  #projects .project-tile p {
+    margin-bottom: 2rem;
+    color: var(--white-color);
+    font-size: 1rem;
+    line-height: 30px;
+  }
+  
+  #projects .project-tile a {
+    padding: 1rem 0;
+    display: block;
+    background-color: var(--white-color);
+    text-align: center;
+    font-size: 0.8rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: var(--navbar-color);
+  }
+  
+  #projects .project-tile i {
+    margin: 0 1rem;
+  }
+  
+  #reach {
+    min-height: 50vh;
+    background-color: var(--darkyellow-color);
+  }
+  
+  #reach .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+  }
+  
+  #reach h2,
+  #reach p {
+    color: var(--projects-color);
+  }
+  
+  #reach p {
+    font-size: 1rem 1.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  #reach .social-media {
+    max-width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  #reach div a {
+    text-align: center;
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--projects-color);
+  }
+  
+  @media screen and (max-width: 500px) {
+    nav .links a {
+      display: block;
+      text-align: right;
+      padding: 3px;
+    }
+  }
+  
